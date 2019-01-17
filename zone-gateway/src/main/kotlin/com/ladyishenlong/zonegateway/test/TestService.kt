@@ -1,6 +1,7 @@
 package com.ladyishenlong.zonegateway.test
 
 import org.springframework.cloud.openfeign.FeignClient
+import org.springframework.stereotype.Component
 import org.springframework.stereotype.Repository
 import org.springframework.web.bind.annotation.GetMapping
 
@@ -8,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping
  * FeignClient 的 name 是被调用端的 spring.application.name
  *
  */
-@Repository
+@Component
 @FeignClient(name = "zone-test")
 interface TestService {
 
